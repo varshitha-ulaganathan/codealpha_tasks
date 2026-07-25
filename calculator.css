@@ -1,0 +1,131 @@
+:root {
+  color-scheme: light;
+  --bg: #ffe6ef;
+  --card: #fffafc;
+  --text: #4f3f5f;
+  --muted: #8b7a99;
+  --accent: #b794f6;
+  --accent-2: #8dd3c7;
+  --button: #f2ebff;
+  --button-hover: #e8dcff;
+  --operator: linear-gradient(135deg, #c8b6ff, #9ed9d2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: grid;
+  place-items: center;
+  background: var(--bg);
+  color: var(--text);
+  padding: 20px;
+}
+
+.calculator-shell {
+  width: min(100%, 380px);
+}
+
+.calculator-title {
+  text-align: center;
+  margin: 0 0 14px;
+  color: #8f5f78;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.calculator-card {
+  background: var(--card);
+  border: 1px solid rgba(183, 148, 246, 0.18);
+  border-radius: 24px;
+  padding: 20px;
+  box-shadow: 0 20px 45px rgba(153, 128, 190, 0.2);
+}
+
+.display {
+  background: linear-gradient(145deg, #fff9ff, #f3edff);
+  border-radius: 18px;
+  padding: 18px;
+  margin-bottom: 16px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.expression {
+  font-size: 1.1rem;
+  color: var(--muted);
+  word-break: break-all;
+}
+
+.result {
+  font-size: 2rem;
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.btn {
+  border: none;
+  border-radius: 16px;
+  padding: 16px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.2s ease;
+  color: var(--text);
+  background: var(--button);
+  box-shadow: 0 8px 16px rgba(183, 148, 246, 0.12);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  background: var(--button-hover);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.operator {
+  background: var(--operator);
+}
+
+.operator:hover {
+  background: linear-gradient(135deg, #c8b6ff, #afe4dc);
+}
+
+.control {
+  background: rgba(141, 211, 199, 0.24);
+  color: #4d8d84;
+}
+
+.equals {
+  background: linear-gradient(135deg, var(--accent), #9ed9d2);
+  grid-row: span 2;
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+@media (max-width: 420px) {
+  .calculator-card {
+    padding: 16px;
+  }
+
+  .btn {
+    padding: 14px 0;
+  }
+}

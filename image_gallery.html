@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creative Image Gallery</title>
+    <link rel="stylesheet" href="image_galery.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <p class="eyebrow">Responsive gallery</p>
+        <h1>Creative Image Gallery</h1>
+        <p class="description">
+          Explore a polished collection of nature, city, animal, travel, and
+          architecture scenes with animated filters and a modern lightbox.
+        </p>
+
+        <div class="filters" role="tablist" aria-label="Image categories">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="nature">Nature</button>
+          <button class="filter-btn" data-filter="city">City</button>
+          <button class="filter-btn" data-filter="animals">Animals</button>
+          <button class="filter-btn" data-filter="travel">Travel</button>
+          <button class="filter-btn" data-filter="architecture">Architecture</button>
+        </div>
+      </header>
+
+      <main class="gallery" id="gallery">
+        <article class="gallery-item nature" data-category="nature" data-index="0">
+          <img
+            src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80"
+            alt="Mountain lake in the morning"
+          />
+          <div class="item-overlay">
+            <h2>Mountain Dawn</h2>
+            <p>Nature</p>
+          </div>
+        </article>
+
+        <article class="gallery-item city" data-category="city" data-index="1">
+          <img
+            src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80"
+            alt="Modern city skyline at sunset"
+          />
+          <div class="item-overlay">
+            <h2>Golden Skyline</h2>
+            <p>City</p>
+          </div>
+        </article>
+
+        <article class="gallery-item animals" data-category="animals" data-index="2">
+          <img
+            src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=900&q=80"
+            alt="Elephant walking through the grassland"
+          />
+          <div class="item-overlay">
+            <h2>Wild Wanderer</h2>
+            <p>Animals</p>
+          </div>
+        </article>
+
+        <article class="gallery-item nature" data-category="nature" data-index="3">
+          <img
+            src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80"
+            alt="Forest path surrounded by green trees"
+          />
+          <div class="item-overlay">
+            <h2>Forest Path</h2>
+            <p>Nature</p>
+          </div>
+        </article>
+
+        <article class="gallery-item city" data-category="city" data-index="4">
+          <img
+            src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=900&q=80"
+            alt="Crowded city street with bright lights"
+          />
+          <div class="item-overlay">
+            <h2>Neon Streets</h2>
+            <p>City</p>
+          </div>
+        </article>
+
+        <article class="gallery-item animals" data-category="animals" data-index="5">
+          <img
+            src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?auto=format&fit=crop&w=900&q=80"
+            alt="Fox in the forest"
+          />
+          <div class="item-overlay">
+            <h2>Forest Fox</h2>
+            <p>Animals</p>
+          </div>
+        </article>
+
+        <article class="gallery-item travel" data-category="travel" data-index="6">
+          <img
+            src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80"
+            alt="Tropical beach with turquoise water"
+          />
+          <div class="item-overlay">
+            <h2>Coastal Escape</h2>
+            <p>Travel</p>
+          </div>
+        </article>
+
+        <article class="gallery-item travel" data-category="travel" data-index="7">
+          <img
+            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80"
+            alt="Mountain valley with a winding road"
+          />
+          <div class="item-overlay">
+            <h2>Scenic Road</h2>
+            <p>Travel</p>
+          </div>
+        </article>
+
+        <article class="gallery-item architecture" data-category="architecture" data-index="8">
+          <img
+            src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=900&q=80"
+            alt="Futuristic architectural building"
+          />
+          <div class="item-overlay">
+            <h2>Modern Lines</h2>
+            <p>Architecture</p>
+          </div>
+        </article>
+
+        <article class="gallery-item architecture" data-category="architecture" data-index="9">
+          <img
+            src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=900&q=80"
+            alt="Elegant historic building with columns"
+          />
+          <div class="item-overlay">
+            <h2>Historic Charm</h2>
+            <p>Architecture</p>
+          </div>
+        </article>
+      </main>
+    </div>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox-close" aria-label="Close preview">×</button>
+      <button class="lightbox-nav prev" aria-label="Previous image">❮</button>
+      <img id="lightbox-image" src="" alt="" />
+      <button class="lightbox-nav next" aria-label="Next image">❯</button>
+    </div>
+
+    <script src="image_gallery.js"></script>
+  </body>
+</html>
